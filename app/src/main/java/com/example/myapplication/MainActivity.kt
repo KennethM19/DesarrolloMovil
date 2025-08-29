@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -37,82 +36,9 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 @Composable
-fun GreetingOne(tittle: String, message: String, modifier: Modifier = Modifier) {
-    Surface(color = Color(0xFFEADDFF),
-        modifier = modifier) {
-        Column(
-            modifier.padding(16.dp),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Text(
-                text = tittle,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(
-                    bottom = 16.dp
-                ),
-                textAlign = TextAlign.Justify
-            )
-            Text(
-                text = message,
-                textAlign = TextAlign.Justify
-            )
-        }
-    }
-}
-@Composable
-fun GreetingTwo(tittle: String, message: String, modifier: Modifier = Modifier) {
-    Surface(color = Color(0xFFD0BCFF),
-        modifier = modifier) {
-        Column(
-            modifier.padding(16.dp),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Text(
-                text = tittle,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(
-                    bottom = 16.dp
-                ),
-                textAlign = TextAlign.Justify
-            )
-            Text(
-                text = message,
-                textAlign = TextAlign.Justify
-            )
-        }
-    }
-}
-@Composable
-fun GreetingThree(tittle: String, message: String, modifier: Modifier = Modifier) {
-    Surface(color = Color(0xFFB69DF8),
-        modifier = modifier) {
-        Column(
-            modifier.padding(16.dp),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Text(
-                text = tittle,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(
-                    bottom = 16.dp
-                ),
-                textAlign = TextAlign.Justify
-            )
-            Text(
-                text = message,
-                textAlign = TextAlign.Justify
-            )
-        }
-    }
-}
-@Composable
-fun GreetingFour(tittle: String, message: String, modifier: Modifier = Modifier) {
-    Surface(color = Color(0xFFF6EDFF),
+fun GreetingText(tittle: String, message: String, modifier: Modifier = Modifier, color: Color) {
+    Surface(color = color,
         modifier = modifier) {
         Column(
             modifier.padding(16.dp),
@@ -139,36 +65,40 @@ fun GreetingFour(tittle: String, message: String, modifier: Modifier = Modifier)
 fun BoxUi() {
     Column() {
         Row(modifier = Modifier.weight(1f)) {
-            GreetingOne(
+            GreetingText(
                 tittle = stringResource(R.string.text_composable),
                 message = stringResource(R.string.text_description),
                 modifier = Modifier
                     .weight(1f)
-                    .fillMaxHeight()
+                    .fillMaxHeight(),
+                color = Color(0xFFEADDFF)
             )
-            GreetingTwo(
+            GreetingText(
                 tittle = stringResource(R.string.image_composable),
                 message = stringResource(R.string.image_description),
                 modifier = Modifier
                     .weight(1f)
-                    .fillMaxHeight()
+                    .fillMaxHeight(),
+                color = Color(0xFFD0BCFF)
             )
         }
 
         Row(modifier = Modifier.weight(1f)) {
-            GreetingThree(
+            GreetingText(
                 tittle = stringResource(R.string.row_composable),
                 message = stringResource(R.string.row_description),
                 modifier = Modifier
                     .weight(1f)
-                    .fillMaxHeight()
+                    .fillMaxHeight(),
+                color = Color(0xFFB69DF8)
             )
-            GreetingFour(
+            GreetingText(
                 tittle = stringResource(R.string.column_composable),
                 message = stringResource(R.string.column_description),
                 modifier = Modifier
                     .weight(1f)
-                    .fillMaxHeight()
+                    .fillMaxHeight(),
+                color = Color(0xFFF6EDFF)
             )
         }
     }
