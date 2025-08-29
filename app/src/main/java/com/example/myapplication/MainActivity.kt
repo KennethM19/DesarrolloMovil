@@ -19,6 +19,7 @@ import com.example.myapplication.ui.theme.MyApplicationTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -139,15 +140,15 @@ fun BoxUi() {
     Column() {
         Row(modifier = Modifier.weight(1f)) {
             GreetingOne(
-                tittle = "Text composable",
-                message = "Displays text and follows the recommended Material Design guidelines.",
+                tittle = stringResource(R.string.text_composable),
+                message = stringResource(R.string.text_description),
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight()
             )
             GreetingTwo(
-                tittle = "Image composable",
-                message = "Creates a composable that lays out and draws a given Painter class object.",
+                tittle = stringResource(R.string.image_composable),
+                message = stringResource(R.string.image_description),
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight()
@@ -156,15 +157,15 @@ fun BoxUi() {
 
         Row(modifier = Modifier.weight(1f)) {
             GreetingThree(
-                tittle = "Row composable",
-                message = "A layout composable that places its children in a horizontal sequence.",
+                tittle = stringResource(R.string.row_composable),
+                message = stringResource(R.string.row_description),
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight()
             )
             GreetingFour(
-                tittle = "Column composable",
-                message = "A layout composable that places its children in a vertical sequence.",
+                tittle = stringResource(R.string.column_composable),
+                message = stringResource(R.string.column_description),
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxHeight()
