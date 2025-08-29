@@ -18,6 +18,7 @@ import com.example.myapplication.ui.theme.MyApplicationTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -68,8 +69,9 @@ fun GreetingImage(modifier: Modifier = Modifier) {
             contentDescription = null
         )
 
-        GreetingText(tittle = "All tasks completed",
-            nice = "Nice work!")
+        GreetingText(tittle = stringResource(R.string.all_tasks_completed),
+            nice = stringResource(R.string.nice_work)
+        )
     }
 }
 
