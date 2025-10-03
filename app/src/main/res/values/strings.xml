@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="tittle1">Día 1: Estiramientos básicos</string>
+    <string name="tittle2">Día 2: Estiramientos básicos</string>
+    <string name="tittle3">Día 3: Estiramientos básicos</string>
+    <string name="tittle4">Día 4: Estiramientos básicos</string>
+    <string name="description1">Hoy es el primer día de tu viaje hacia una vida más saludable. Comienza con una caminata de 15 minutos.</string>
+    <string name="description2">Dedica 10 minutos a estirar tu cuerpo. Esto ayudará a prevenir lesiones y mejorar tu flexibilidad.</string>
+    <string name="description3">Dedica 5 minutos a estirar tu cuerpo. Esto ayudará a prevenir lesiones y mejorar tu flexibilidad.</string>
+    <string name="description4">Hoy es el cuarto día de tu viaje hacia una vida más saludable. Comienza con una caminata de 15 minutos.</string>
 </resources>
