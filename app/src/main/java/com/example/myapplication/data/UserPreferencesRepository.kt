@@ -3,7 +3,7 @@ package com.example.myapplication.data
 import com.example.myapplication.data.UserPreferencesKeys.SEARCH_VALUE
 import kotlinx.coroutines.flow.Flow
 import java.io.IOException
-import java.util.prefs.Preferences
+import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
