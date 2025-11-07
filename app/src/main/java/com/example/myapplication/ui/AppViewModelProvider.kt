@@ -15,8 +15,7 @@ object AppViewModelProvider {
     val Factory = viewModelFactory {
         initializer {
             ItemEditViewModel(
-                this.createSavedStateHandle(),
-                inventoryApplication().container.itemsRepository
+                this.createSavedStateHandle()
             )
         }
         initializer {
@@ -25,13 +24,12 @@ object AppViewModelProvider {
 
         initializer {
             ItemDetailsViewModel(
-                this.createSavedStateHandle(),
-                inventoryApplication().container.itemsRepository
+                this.createSavedStateHandle()
             )
         }
 
         initializer {
-            HomeViewModel(inventoryApplication().container.itemsRepository)
+            HomeViewModel()
         }
     }
 }
